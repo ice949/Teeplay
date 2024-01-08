@@ -3,14 +3,14 @@ import { View, StyleSheet, Pressable, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
-const HomeScreen = () => {
+const EventsScreen = () => {
 
   const navigation = useNavigation();
 
   return (
     <View>
       <View style={styles.flex}>
-        <Pressable style={styles.button} onPress={() => navigation.navigate('Home')}>
+        <Pressable style={styles.button2} onPress={() => navigation.navigate('Community')}>
         <FontAwesome
             name="download"
             size={18}
@@ -19,7 +19,7 @@ const HomeScreen = () => {
           />
           <Text style={styles.text}>Feeds</Text>
         </Pressable>
-        <Pressable style={styles.button2} onPress={() => navigation.navigate('Events')}>
+        <Pressable style={styles.button} onPress={() => navigation.navigate('Events')}>
         <FontAwesome
             name="tree"
             size={18}
@@ -28,7 +28,7 @@ const HomeScreen = () => {
           />
           <Text style={styles.text}>Events</Text>
         </Pressable>
-        <Pressable style={styles.button2} onPress={() => navigation.navigate('Community')}>
+        <Pressable style={styles.button2} onPress={() => navigation.navigate('All')}>
         <FontAwesome
             name="download"
             size={18}
@@ -79,4 +79,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default EventsScreen;

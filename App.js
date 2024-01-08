@@ -4,16 +4,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screens/HomeScreen";
 import CommunityScreen from "./screens/CommunityScreen";
 import MyTabs from "./navigator/myTabs";
+import EventsScreen from "./screens/EventsScreen";
 
-const Stack = createStackNavigator();
+
 
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
-        <Stack.Screen name="Community" component={CommunityScreen} />
-      </Stack.Navigator> */}
       <MyTabs />
     </NavigationContainer>
   );
